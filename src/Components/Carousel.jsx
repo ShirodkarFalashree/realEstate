@@ -1,14 +1,15 @@
 // SpotlightCarousel.jsx
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation } from 'swiper/modules';
+import { Navigation, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import inman from '../assets/pictures/asset 22.jpeg'
-import reporter from '../assets/pictures/asset 21.jpeg'
-import Journal from '../assets/pictures/asset 19.jpeg'
-import Mansion from '../assets/pictures/asset 17.jpeg'
-import house from '../assets/pictures/asset 48.jpeg'
+import inman from '../assets/pictures/asset 22.jpeg';
+import reporter from '../assets/pictures/asset 21.jpeg';
+import Journal from '../assets/pictures/asset 19.jpeg';
+import Mansion from '../assets/pictures/asset 17.jpeg';
+import house from '../assets/pictures/asset 48.jpeg';
+
 const cards = [
   {
     title: 'Inman News',
@@ -32,7 +33,8 @@ const cards = [
   },
   {
     title: 'Variety Magzine',
-    subtitle: '"Mills is Coldwell Banker’s No. 1 agent worldwide, and her expertise has propelled her to the top of luxury real estate agents in the country.Jade Mills sells famed Beverly Park home for $70 Million."',
+    subtitle:
+      '"Mills is Coldwell Banker’s No. 1 agent worldwide, and her expertise has propelled her to the top of luxury real estate agents in the country."',
     image: house,
   },
 ];
@@ -41,11 +43,15 @@ export default function SpotlightCarousel() {
   return (
     <div className="bg-black py-16">
       <Swiper
-        modules={[Navigation]}
+        modules={[Navigation, Autoplay]}
         slidesPerView={1.5}
         centeredSlides={true}
-        navigation={true}
         loop={true}
+        navigation={true}
+        autoplay={{
+          delay: 1500, // 1.5 seconds
+          disableOnInteraction: false,
+        }}
         spaceBetween={50}
         className="w-full max-w-5xl mx-auto"
       >
@@ -53,8 +59,8 @@ export default function SpotlightCarousel() {
           <SwiperSlide key={idx}>
             {({ isActive }) => (
               <div
-                className={`transition-all duration-500 ease-in-out overflow-hidden text-white  shadow-xl ${
-                  isActive ? 'scale-100' : 'scale-90 opacity-50'
+                className={`transition-all duration-500 ease-in-out overflow-hidden text-white shadow-xl ${
+                  isActive ? 'scale-100 opacity-100' : 'scale-90 opacity-50'
                 }`}
               >
                 <img
