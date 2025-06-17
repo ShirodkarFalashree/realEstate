@@ -1,0 +1,8 @@
+<svg version="1.1" id="circle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" xml:space="preserve">
+        <g transform="translate(50 45)" class="arrow">
+          <path d="M8 6.999S3.02 9.96.214 13.665L0 13.47c.8-1.767 1.713-4.317 4.122-6.471C1.712 4.843.8 2.292 0 .526L.216.332C3.023 4.032 8 6.999 8 6.999Z" fill="white"/>
+        </g>
+        <circle fill="none" stroke="#f7f8f6" stroke-width="1" stroke-mitterlimit="0" cx="50" cy="50" r="48" stroke-dasharray="360" stroke-linecap="round" transform="rotate(-90 ) translate(-100 0)">
+          <animate class="cursor-animation" attributeName="stroke-dashoffset" values="360;0" dur="1.5s" repeatCount="1" restart="always"/>
+        </circle>
+      </svg>
