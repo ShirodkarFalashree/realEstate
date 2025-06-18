@@ -26,7 +26,6 @@ const OverlayMenu = ({ onClose }) => {
     'My Account',
   ];
 
-  // Helper to wrap each letter in a span
   const splitText = (text) =>
     text.split('').map((char, i) => (
       <span key={i} className="inline-block opacity-0 translate-y-3">
@@ -42,7 +41,6 @@ const OverlayMenu = ({ onClose }) => {
       Array.from(el.querySelectorAll('span'))
     );
 
-    // Animate the letters with stagger
     gsap.to([...leftSpans, ...rightSpans], {
       opacity: 1,
       y: 0,
@@ -55,18 +53,18 @@ const OverlayMenu = ({ onClose }) => {
   return (
     <div
       ref={overlayRef}
-      className="fixed inset-0 bg-black z-[9999] text-white font-[Italiana] flex px-20 py-16"
+      className="fixed inset-0 bg-black z-[9999] text-white font-[Italiana] flex flex-col lg:flex-row px-6 sm:px-10 md:px-16 lg:px-20 py-10 sm:py-12 lg:py-16"
     >
       {/* Close Button */}
       <button
         onClick={onClose}
-        className="absolute top-6 right-8 text-white text-3xl cursor-pointer"
+        className="absolute top-6 right-6 text-white text-2xl sm:text-3xl"
       >
         <FaTimes />
       </button>
 
       {/* Left Menu */}
-      <div className="w-1/2 flex flex-col justify-center gap-10 text-[4rem] leading-none">
+      <div className="w-full lg:w-1/2 flex flex-col justify-center gap-6 sm:gap-8 md:gap-10 text-3xl sm:text-4xl md:text-5xl lg:text-[4rem] leading-tight lg:leading-none mt-16 lg:mt-0">
         {leftMenu.map((item, idx) => (
           <div
             key={idx}
@@ -79,7 +77,7 @@ const OverlayMenu = ({ onClose }) => {
       </div>
 
       {/* Right Menu */}
-      <div className="w-1/2 flex flex-col justify-center gap-4 text-2xl pl-10">
+      <div className="w-full lg:w-1/2 flex flex-col justify-center gap-3 sm:gap-4 text-base sm:text-lg md:text-xl lg:text-2xl pl-0 lg:pl-10 mt-10 lg:mt-0">
         {rightMenu.map((item, idx) => (
           <div
             key={idx}
