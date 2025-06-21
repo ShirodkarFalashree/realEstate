@@ -1,43 +1,37 @@
-// SpotlightCarousel.jsx
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import inman from '../assets/pictures/asset 22.jpeg';
-import reporter from '../assets/pictures/asset 21.jpeg';
-import Journal from '../assets/pictures/asset 19.jpeg';
-import Mansion from '../assets/pictures/asset 17.jpeg';
-import house from '../assets/pictures/asset 48.jpeg';
 
 const cards = [
   {
-    title: 'Inman News',
-    subtitle: '"Jade Mills inducted into the Inman Golden I Hall of Fame."',
-    image: inman,
+    title: 'Photography Excellence Awards',
+    subtitle: '"Aarav Kapoor receives international recognition for artistic storytelling."',
+    image: "https://res.cloudinary.com/dghoya7tk/image/upload/v1750543870/Gemini_Generated_Image_i8pkjyi8pkjyi8pk_qu5ghk.png",
   },
   {
-    title: 'Hollywood Reporter',
-    subtitle: '"More than $6B career sales..."',
-    image: reporter,
+    title: 'Golden Hour Vision',
+    subtitle: '"Capturing the fleeting glow of sunsets through a cinematic lens."',
+    image: "https://res.cloudinary.com/dghoya7tk/image/upload/v1750544050/Gemini_Generated_Image_mhvzzumhvzzumhvz_rppy80.png",
   },
   {
-    title: 'Wall Street Journal',
-    subtitle: '"Jade Mills Sells Coachella Valley Villa"',
-    image: Journal,
+    title: 'Chasing Waterfalls',
+    subtitle: '"Exploring movement and emotion in nature’s purest moments."',
+    image: "https://res.cloudinary.com/dghoya7tk/image/upload/v1750544201/Gemini_Generated_Image_9najmr9najmr9naj_hpvjk6.png",
   },
   {
-    title: 'Mansion Global',
-    subtitle: '"Jade Mills sells famed Beverly Park home for $70 Million."',
-    image: Mansion,
+    title: 'Cityscapes in Focus',
+    subtitle: '"Urban storytelling framed through light, depth, and silence."',
+    image: "https://res.cloudinary.com/dghoya7tk/image/upload/v1750544425/Gemini_Generated_Image_61rgie61rgie61rg_ao9cpb.png",
   },
   {
-    title: 'Variety Magzine',
-    subtitle:
-      '"Mills is Coldwell Banker’s No. 1 agent worldwide, and her expertise has propelled her to the top of luxury real estate agents in the country."',
-    image: house,
+    title: 'Whispers of Nature',
+    subtitle: '"Stillness, solitude, and the natural world — captured with soul."',
+    image: 'https://images.pexels.com/photos/955658/pexels-photo-955658.jpeg',
   },
 ];
+
 
 export default function SpotlightCarousel() {
   return (
@@ -49,7 +43,7 @@ export default function SpotlightCarousel() {
         loop={true}
         navigation={true}
         autoplay={{
-          delay: 1500, // 1.5 seconds
+          delay: 1500,
           disableOnInteraction: false,
         }}
         spaceBetween={50}

@@ -1,20 +1,20 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
-import bg1 from '../assets/pictures/asset 18.jpeg';
-import bg2 from '../assets/pictures/asset 19.jpeg';
-import bg3 from '../assets/pictures/asset 35.jpeg';
-import bg4 from '../assets/pictures/asset 36.jpeg';
-import bg5 from '../assets/pictures/asset 37.jpeg';
-import bg6 from '../assets/pictures/asset 38.jpeg';
-import bg7 from '../assets/pictures/asset 41.jpeg';
-import bg9 from '../assets/pictures/asset 4.jpeg';
-import bg10 from '../assets/pictures/asset 17.jpeg';
 
-const images = [bg1, bg2, bg3, bg4, bg5, bg6, bg7, bg9, bg10];
+
+
+const images = [
+  'https://images.pexels.com/photos/1182284/pexels-photo-1182284.jpeg',
+  'https://images.pexels.com/photos/1214577/pexels-photo-1214577.jpeg',
+  'https://images.pexels.com/photos/236047/pexels-photo-236047.jpeg',
+    'https://images.pexels.com/photos/955658/pexels-photo-955658.jpeg',
+  'https://images.pexels.com/photos/879794/pexels-photo-879794.jpeg',
+  'https://images.pexels.com/photos/236047/pexels-photo-236047.jpeg',
+  'https://images.pexels.com/photos/237266/pexels-photo-237266.jpeg'
+];
 
 const Hero = () => {
   const [current, setCurrent] = useState(0);
-
   const textRef = useRef([]);
   textRef.current = [];
 
@@ -25,14 +25,10 @@ const Hero = () => {
     return () => clearInterval(interval);
   }, []);
 
-  // GSAP Fade-in on load
   useEffect(() => {
     gsap.fromTo(
       textRef.current,
-      {
-        opacity: 0,
-        y: 30,
-      },
+      { opacity: 0, y: 30 },
       {
         opacity: 1,
         y: 0,
@@ -70,29 +66,20 @@ const Hero = () => {
 
       {/* Text Content */}
       <div className="relative z-20 flex flex-col items-center justify-center h-full text-white text-center px-4">
-        <p
-          className="text-[12px] tracking-widest mb-4"
-          ref={addToRefs}
-        >
-          THE 9 BILLION DOLLAR WOMAN
+        <p className="text-[12px] tracking-widest mb-4" ref={addToRefs}>
+          CAPTURING STORIES IN FRAMES
         </p>
-        <h1
-          className="text-6xl md:text-7xl font-hero mb-6"
-          ref={addToRefs}
-        >
-          Jade Mills Estates
+        <h1 className="text-6xl md:text-7xl font-hero mb-6" ref={addToRefs}>
+          Aarav Kapoor Photography
         </h1>
-        <p
-          className="text-lg mb-8"
-          ref={addToRefs}
-        >
-          Coldwell Banker Global Luxury Ambassador
+        <p className="text-lg mb-8" ref={addToRefs}>
+          Lifestyle | Wedding | Travel Photographer
         </p>
         <button
           className="bg-black font-basic text-[12px] text-white px-11 py-6 cursor-pointer transition"
           ref={addToRefs}
         >
-          SEARCH ALL HOMES →
+          VIEW PORTFOLIO →
         </button>
       </div>
     </div>

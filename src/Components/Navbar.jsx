@@ -20,7 +20,7 @@ const Navbar = () => {
 
         {/* Center - Logo */}
         <div className="text-2xl sm:text-4xl md:text-5xl font-nav tracking-wide text-center mx-auto md:mx-0">
-          Jade Mills
+         The Kapoors
         </div>
 
         {/* Right Side - Contact + Menu */}
